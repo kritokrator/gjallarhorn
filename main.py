@@ -48,7 +48,7 @@ class LinkGatherer:
     def get_links(self):
         youtube = build(self.YOUTUBE_API_SERVICE_NAME, self.YOUTUBE_API_VERSION, developerKey=self.DEVELOPER_KEY)
         videos = {}
-        youtube_link_base = 'https://www.youtube.com/watch?v ={}'
+        youtube_link_base = 'https://www.youtube.com/watch?v={}'
         for track in self.track_list:
             query = '{} {}'.format(track['name'], track['artist']['name'])
             search_response = youtube.search().list(
