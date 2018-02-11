@@ -70,9 +70,8 @@ if __name__ == '__main__':
     user = 'DoomhammerNG'
 
     last_fm_downloader = Downloader(user=user, api_key=settings.api_key)
+    result = last_fm_downloader.get_all_tracks()
 
-    with open('last_fm_json.json') as f:
-        result = json.load( f)
     print(len(result))
     youtube_link_gatherer = LinkGatherer(result, settings.youtube_gjallarhorn_api_key)
     videos = youtube_link_gatherer.get_links()
