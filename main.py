@@ -28,7 +28,7 @@ class Downloader():
         result = self.get_first_page()
         for page_nr in range(2, self.total_pages + 1):
             url = 'http://ws.audioscrobbler.com/2.0/?method=user.getlovedtracks&user={}&api_key={}&page={}&format=json'.format(
-                'DoomhammerNG', '28f67b370f7edbeb924d6bfac6c0dcce', page_nr)
+                self.user, self.api_key, page_nr)
             response = requests.get(url)
             page = json.loads(response.text)
             result += page['lovedtracks']['track']
