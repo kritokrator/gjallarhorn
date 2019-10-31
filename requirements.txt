@@ -1,2 +1,14 @@
+asana==0.7.1
+certifi==2018.4.16
+chardet==3.0.4
 google-api-python-client==1.6.4
+future==0.16.0
+git+https://github.com/eyeseast/python-frontmatter.git#egg=python-frontmatter
+idna==2.6
+oauthlib==2.0.7
+progressbar33==2.4
+PyTumblr==0.0.7
 requests==2.18.4
+requests-oauthlib==0.8.0
+six==1.11.0
+urllib3==1.22
